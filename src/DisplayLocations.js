@@ -2,14 +2,16 @@ import { useQuery} from '@apollo/client';
 import { gql } from '@apollo/client';
 
 const GET_LOCATIONS = gql`
-{
-    charactersByIds(ids:"1") {
-        id 
+query GetAllEpisodeIds {
+    episodes {
+      results {
+        episode
         name
-        status
+        air_date
       }
     }
-`;
+  }
+`
 
 
 function DisplayLocations() {
@@ -18,11 +20,12 @@ function DisplayLocations() {
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error : {error.message}</p>;
   
-    return data.charactersByIds.map(({ id, name, status, image }) => (
+    return data.episodes.results.map(({ id, episode, name, air_date,  }) => (
       <div key={id}>
+        <h3>{episode}</h3>
         <h3>{name}</h3>
-        <h3>{status}</h3>
-        <h3>{image}</h3>
+        <h3>{air_date}</h3>
+
         <img width="400" height="250" alt="location-reference" src={`https://rickandmortyapi.com/api/character/avatar/1.jpeg`} />
         <br />
         <b>About this location:</b>
