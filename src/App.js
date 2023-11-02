@@ -1,12 +1,16 @@
 // Import everything needed to use the `useQuery` hook
-import DisplayLocations from'./DisplayLocations'
+import DisplayLocations from'./pages/DisplayLocations'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Details from './pages/Details'
 
 export default function App() {
   return (
-    <div>
-      <h2>Lista de Episódios Rick and Morty</h2>
-      <DisplayLocations/>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<DisplayLocations />} />
+        <Route path="/about" element={<Details />} />
+      </Routes>
+    </Router>
   )
 }
 

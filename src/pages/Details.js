@@ -23,14 +23,12 @@ function DisplayLocations() {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error : {error.message}</p>;
 
-
   return (
     <div>
-      
       {data.episodes.results.map(({ id, episode, name, air_date, characters }) => {
         // Calcula o total de personagens para o episódio atual
         const totalCharacterCountForEpisode = characters ? characters.length : 0;
-        
+
         return (
           <div key={id}>
             <h3>{episode}</h3>
