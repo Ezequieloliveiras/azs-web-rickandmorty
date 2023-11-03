@@ -22,7 +22,6 @@ root.render(
     <Template>
     <TitleRickAndMorty />
     <App />
-
     </Template>
   </ApolloProvider>,
 )
