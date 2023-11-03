@@ -64,8 +64,6 @@ function DisplayLocations() {
                       </li>
                     </ul>
                   </div>
-
-
                 </div>
               )
             })}
