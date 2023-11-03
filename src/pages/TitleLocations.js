@@ -3,7 +3,7 @@ function TitleRickAndMorty() {
    
     return (
         <div>
-            <h2>Lista de Episódios Rick and Morty</h2>
+            <h1>Lista de Episódios Rick and Morty</h1>
         </div>
     )
 }

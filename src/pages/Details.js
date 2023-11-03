@@ -2,19 +2,23 @@ import { useQuery } from '@apollo/client';
 import { gql } from '@apollo/client';
 
 const GET_ALL_EPISODE_IDS = gql`
-  query GetAllEpisodeIds {
-    episodes {
-      results {
-        id
-        episode
-        name
-        air_date
-        characters {
-          count: id
-        }
+
+query GetAllCharacters {
+  episodes {
+    results {
+      episode
+      name
+      air_date
+       
+     	characters {
+        image
+        species
+        status
+        name: name
       }
     }
   }
+}
 `;
 
 function DisplayLocations() {
@@ -26,7 +30,6 @@ function DisplayLocations() {
   return (
     <div>
       {data.episodes.results.map(({ id, episode, name, air_date, characters }) => {
-        // Calcula o total de personagens para o episódio atual
         const totalCharacterCountForEpisode = characters ? characters.length : 0;
 
         return (
@@ -34,18 +37,41 @@ function DisplayLocations() {
             <h3>{episode}</h3>
             <h3>{name}</h3>
             <h3>{air_date}</h3>
+
             <h3>Total de Personagens no Episódio: {totalCharacterCountForEpisode}</h3>
-            <img
-              width="400"
-              height="250"
-              alt="location-reference"
-              src={`https://rickandmortyapi.com/api/character/avatar/1.jpeg`}
-            />
-            <br />
-            <b>About this location:</b>
+
+            {characters.map((character, index) => {
+              return (
+                <div key={index}>
+                  <img
+                    width="400"
+                    height="250"
+                    alt="details-reference"
+                    src={character.image}
+                  />
+                  <br />
+                  <br />
+                  <div>
+                    <ul>
+                      <li>
+                        {character.name}
+                      </li>
+                      <li>
+                        {character.species}
+                      </li>
+                      <li>
+                        {character.status}
+                      </li>
+                    </ul>
+                  </div>
+
+
+                </div>
+              )
+            })}
             <br />
           </div>
-        );
+        )
       })}
     </div>
   );
