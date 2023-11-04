@@ -38,25 +38,25 @@ function Details() {
         return (
           <div key={id}>
             <div style={{ margin: '50px 0px' }}>
-              <h3>{episode}</h3>
-              <h3>{name}</h3>
-              <h3>{air_date}</h3>
+              <h3> Episódio: {episode}</h3>
+              <h3>Nome: {name}</h3>
+              <h3>Lançamento: {air_date}</h3>
               <h3>Total de Personagens no Episódio: {totalCharacterCountForEpisode}</h3>
             </div>
 
 
             {characters.map((character) => {
               return (
-                <div style={{ backgroundColor: 'grey', display: 'flex', justifyContent: 'center' }}>
-                  <div style={{ width: '700px', backgroundColor: 'white', }}>
-                    <img
-                      width="400"
-                      height="250"
-                      alt="details-reference"
-                      src={character.image}
-                    />
-                    <div style={{margin:'30px 0px'}}>
-
+                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                  <div style={{ width: '100%',height:'450px', backgroundColor: '#f3e5f5', paddingTop: '80px', display:'flex', justifyContent:'center' }}>
+                    <div style={{ backgroundColor:'white', boxShadow: '0px 0px 5px 1px black', borderRadius:'5px', width:'500px', height:'350px'}}>
+                      <img
+                        width="100%"
+                        height="250"
+                        alt="details-reference"
+                        src={character.image}
+                      />
+                    <div style={{marginTop:'20px'}}>
                       <div>
                         Personagem: {character.name}
                       </div>
@@ -66,9 +66,11 @@ function Details() {
                       <div>
                         Status: {character.status}
                       </div>
+                      </div>
                     </div>
                   </div>
                 </div>
+
               )
             })}
             <br />

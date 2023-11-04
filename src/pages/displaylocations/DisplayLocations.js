@@ -41,7 +41,7 @@ function DisplayLocations() {
             borderRadius: '5px',
             display: 'block',
             justifyContent: 'space-around',
-            backgroundColor: 'grey',
+            backgroundColor: '#f3e5f5',
             boxShadow: '0px 0px 5px 1px black',
           }} key={id}>
             
