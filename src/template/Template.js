@@ -9,7 +9,7 @@ const StyledContainer = styled(Container)(() => ({
     display: 'block',
     justifyContent: 'center',
     textAlign: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
 }))
 
 const Template = ({ children }) => {
