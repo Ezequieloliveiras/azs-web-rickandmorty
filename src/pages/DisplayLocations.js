@@ -36,23 +36,24 @@ function DisplayLocations() {
           <div style={{
             position: 'relative',
             width: '900px',
-            padding:'10px',
-            margin:'10px',
-            borderRadius:'5px',
+            padding: '10px',
+            margin: '20px',
+            borderRadius: '5px',
             display: 'block',
             justifyContent: 'space-around',
             backgroundColor: 'grey',
+            boxShadow: '0px 0px 5px 1px black',
           }} key={id}>
 
             <div
               style={{
                 backgroundColor: 'white',
                 border: 'none',
-                boxShadow:'1px 1px 1px 1px',
+                boxShadow: '0px 0px 5px 1px',
                 width: '300px',
                 height: '300px',
                 margin: '10px',
-                borderRadius:'5px',
+                borderRadius: '5px',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
@@ -62,10 +63,17 @@ function DisplayLocations() {
               <h3>Episódio: {episode}</h3>
 
             </div>
-            <div style={{ width: '400px', position: 'absolute', top: '140px', left: '400px'}}>
-              <h3>Nome do Episódio: {name}</h3>
-              <h3>Lançamento: {air_date}</h3>
-              <h3>Total de Personagens no Episódio: {totalCharacterCountForEpisode}</h3>
+            <div style={{ width: '400px', height:'150px', position: 'absolute', top: '140px', left: '400px'}}>
+
+              <div style={{display:'flex', paddingBottom:'10px'}}>
+                <h4>Nome do Episódio:</h4> {name}
+              </div>
+              <div style={{display:'flex', paddingBottom:'10px'}}>
+                <h4>Lançamento:</h4> {air_date}
+              </div>
+              <div style={{display:'flex', paddingBottom:'10px'}}>
+                <h4>Total de Personagens no Episódio:</h4> {totalCharacterCountForEpisode}
+              </div>
             </div>
           </div>
         )
