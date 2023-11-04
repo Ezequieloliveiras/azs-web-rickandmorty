@@ -1,7 +1,6 @@
-// Import everything needed to use the `useQuery` hook
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Home from'./pages/Home'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Details from './pages/Details'
+import Details from './pages/details/Details'
 
 export default function App() {
   return (
