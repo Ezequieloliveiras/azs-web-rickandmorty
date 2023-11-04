@@ -70,7 +70,7 @@ function DisplayLocations() {
               top: '140px',
               left: '400px'
             }}>
-              <div style={{ display: 'flex', paddingBottom: '10px' }}>
+              <div style={{ display: 'flex', width:'600px',  paddingBottom: '10px' }}>
                 <h4>Nome do Episódio:</h4> {name}
               </div>
               <div style={{ display: 'flex', paddingBottom: '10px' }}>

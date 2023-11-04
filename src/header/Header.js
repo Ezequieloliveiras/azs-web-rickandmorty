@@ -77,19 +77,16 @@ function Header() {
                     >
                         Rick and Morty
                     </Typography>
+
                     <Typography
-                 
                         component="div"
-                        sx={{ padding:'0px 30px ' }}
-                    >
-                        Detalhes dos Personagens
+                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
+                        <a style={{ color: 'white', textDecoration: 'none' }} href="/details">Detalhes dos Episódios</a>
                     </Typography>
-                    <Typography                       
-         
+                    <Typography
                         component="div"
-                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-                    >
-                        Lista de Episódios
+                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
+                        <a style={{ color: 'white', textDecoration: 'none' }} href="/">Lista de Episódios</a>
                     </Typography>
                     <Search>
                         <SearchIconWrapper>
