@@ -62,13 +62,13 @@ function Details() {
                 <ContainerStyle >
                   <BoxStyle >
                     <ContentStyle>
-                      <img
-                        width="100%"
-                        height="250"
-                        alt="details-reference"
-                        src={character.image}
-                      />
-                      <div style={{ marginTop: '20px' }}>
+                        <img
+                          width="100%"
+                          height="auto"
+                          alt="details-reference"
+                          src={character.image}
+                        />
+                      <div style={{ marginTop: '20px', backgroundColor:'white', position: 'absolute', bottom: '0px',padding: '5px' }}>
                         <div>
                           Personagem: {character.name}
                         </div>

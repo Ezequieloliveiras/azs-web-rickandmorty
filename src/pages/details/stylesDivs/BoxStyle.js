@@ -2,9 +2,9 @@ import { styled } from '@mui/system'
 
 const BoxStyle = styled('div')(() => ({
     width: '100%',
-    height: '450px',
+    height: 'auto',
+    padding: '50px',
     backgroundColor: '#f3e5f5',
-    paddingTop: '80px',
     display: 'flex',
     justifyContent: 'center'
 }))
