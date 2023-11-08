@@ -2,7 +2,7 @@ import { useQuery } from '@apollo/client'
 import { gql } from '@apollo/client'
 
 import TitleDetails from '../src/pages/displaylocations/TitleLocations'
-import DescriptionStyle from '../src/pages/details/stylesDivs/DescriptionStyle'
+import DescriptionStyle from './pages/details/StyleDivs/DescriptionStyle'
 import Grid from '@mui/material/Unstable_Grid2/Grid2'
 
 

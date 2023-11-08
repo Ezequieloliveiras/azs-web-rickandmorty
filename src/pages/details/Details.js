@@ -1,9 +1,16 @@
-import React from 'react'
 import { useQuery } from '@apollo/client'
 import { gql } from '@apollo/client'
+
+import {
+  Grid,
+  Card,
+  CardMedia,
+  CardContent,
+  Typography
+} from '@mui/material'
+
 import TitleDetails from './TitleDetails'
-import DescriptionStyle from './stylesDivs/DescriptionStyle'
-import { Grid, Card, CardMedia, CardContent, Typography } from '@mui/material'
+import DescriptionStyle from './StyleDivs/DescriptionStyle'
 
 const GET_ALL_EPISODE_IDS = gql`
   query GetAllCharacters {
@@ -46,7 +53,7 @@ function Details() {
 
             <Grid container spacing={3} justifyContent="center">
               {characters.map((character, index) => (
-                <Grid item key={index} xs={5} md={4} lg={3}>
+                <Grid item key={index} xs={12} md={4} lg={3}>
                   <Card>
                     <CardMedia
                       component="img"
