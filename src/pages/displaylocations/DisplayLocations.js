@@ -7,6 +7,8 @@ import CardStyle from './stylesDivs/CardStyle'
 import ContentStyle from '../displaylocations/stylesDivs/ContentStyle'
 import Div from '../displaylocations/stylesDivs/NameDivs'
 
+
+
 const GET_ALL_EPISODE_IDS = gql`
 
   query GetAllEpisodeIds {
