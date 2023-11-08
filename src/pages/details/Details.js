@@ -37,7 +37,7 @@ function Details() {
   if (error) return <p>Error: {error.message}</p>
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '50px' }}>
+    <div style={{ textAlign: 'center', marginTop: '50px', margin: '0px 20px 0px 20px' }}>
       <TitleDetails />
       {data.episodes.results.map(({ id, episode, name, air_date, characters }) => {
         const totalCharacterCountForEpisode = characters ? characters.length : 0
@@ -53,11 +53,11 @@ function Details() {
 
             <Grid container spacing={3} justifyContent="center">
               {characters.map((character, index) => (
-                <Grid item key={index} xs={12} md={4} lg={3}>
+                <Grid item key={index} xs={10} md={4} lg={3}>
                   <Card>
                     <CardMedia
                       component="img"
-                      height="300"
+                      height="auto"
                       alt="details-reference"
                       src={character.image}
                     />
