@@ -11,6 +11,7 @@ import {
 
 import TitleDetails from './TitleDetails'
 import DescriptionStyle from './StyleDivs/DescriptionStyle'
+import Father from './StyleDivs/Father'
 
 const GET_ALL_EPISODE_IDS = gql`
   query GetAllCharacters {
@@ -37,7 +38,7 @@ function Details() {
   if (error) return <p>Error: {error.message}</p>
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '50px', margin: '0px 20px 0px 20px' }}>
+    <Father >
       <TitleDetails />
       {data.episodes.results.map(({ id, episode, name, air_date, characters }) => {
         const totalCharacterCountForEpisode = characters ? characters.length : 0
@@ -77,7 +78,7 @@ function Details() {
           </div>
         )
       })}
-    </div>
+    </Father>
   )
 }
 
