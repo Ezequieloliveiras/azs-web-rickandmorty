@@ -22,7 +22,7 @@ function FavoriteButton({ id, onToggleFavorite }) {
 
     return (
         <button onClick={handleToggleFavorite} style={{ background: 'none', border: 'none' }}>
-            {isFavorite ? <StarIcon style={{ color: '#f7d917', fontSize: starSize }} /> : <StarOutlineIcon style={{ fontSize: starSize }} />}
+            {isFavorite ? <StarIcon style={{ color: '#eead2d', fontSize: starSize }} /> : <StarOutlineIcon style={{ fontSize: starSize }} />}
         </button>
     )
 }

@@ -1,6 +1,5 @@
 import { useQuery } from '@apollo/client'
 import { gql } from '@apollo/client'
-import { useState } from 'react'
 
 import {
   Grid,
@@ -13,8 +12,6 @@ import {
 import TitleDetails from './TitleDetails'
 import DescriptionStyle from './StyleDivs/DescriptionStyle'
 import Father from './StyleDivs/Father'
-import FavoriteButton from './FavoriteButton'
-
 
 const GET_ALL_EPISODE_IDS = gql`
   query GetAllCharacters {
@@ -38,30 +35,14 @@ const GET_ALL_EPISODE_IDS = gql`
 function Details() {
   const { loading, error, data } = useQuery(GET_ALL_EPISODE_IDS)
 
-  const initialFavoriteEpisodes = []
-
-  const [favoriteEpisodes, setFavoriteEpisodes] = useState(initialFavoriteEpisodes)
-
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error: {error.message}</p>
-
-  const toggleFavorite = (episodeId) => {
-    setFavoriteEpisodes((prevFavoriteEpisodes) => {
-      const isFavorite = prevFavoriteEpisodes.includes(episodeId)
-      if (isFavorite) {
-        return prevFavoriteEpisodes.filter((favEpisode) => favEpisode !== episodeId)
-      } else {
-        return [...prevFavoriteEpisodes, episodeId]
-      }
-    })
-  }
 
   return (
     <Father>
       <TitleDetails />
       {data.episodes.results.map(({ id, episode, name, air_date, characters }) => {
         const totalCharacterCountForEpisode = characters ? characters.length : 0
-        const isFavorite = favoriteEpisodes.includes(id)
 
         return (
           <div key={id}>
@@ -70,11 +51,6 @@ function Details() {
               <h3>Nome: {name}</h3>
               <h3>Lançamento: {air_date}</h3>
               <h3>Total de Personagens no Episódio: {totalCharacterCountForEpisode}</h3>
-              <FavoriteButton
-                id={id}
-                onToggleFavorite={() => toggleFavorite(id)}
-                isFavorite={isFavorite}
-              />
             </DescriptionStyle>
 
             <Grid container spacing={3} justifyContent="center">
@@ -98,8 +74,6 @@ function Details() {
                 </Grid>
               ))}
             </Grid>
-
-            <br />
           </div>
         )
       })}
