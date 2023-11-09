@@ -1,9 +1,11 @@
 import { styled } from '@mui/system'
 
 const ContentStyle = styled('div')(() => ({
+        display:'flex',
         width: '400px',
         height: '150px',
-        position: 'absolute',
+        justifyContent:'center',
+        flexDirection:'column',
         top: '140px',
         left: '400px'
 }))

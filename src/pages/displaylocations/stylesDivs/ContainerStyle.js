@@ -1,15 +1,19 @@
-import { styled } from '@mui/system'
+import { styled } from '@mui/system';
+import Grid from '@mui/material/Grid';
 
-const ContainerStyle = styled('div')(() => ({
-        position: 'relative',
-        width: '900px',
-        padding: '10px',
-        margin: '20px',
-        borderRadius: '5px',
-        display: 'block',
-        justifyContent: 'space-around',
-        backgroundColor: '#f3e5f5',
-        boxShadow: '0px 0px 5px 1px black'
-}))
+const ContainerStyle = styled(Grid)(({ theme }) => ({
+  width: '100%',
+  padding: '10px',
+  margin: '20px 0px',
+  borderRadius: '5px',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  backgroundColor: '#f3e5f5',
+  boxShadow: '0px 0px 5px 1px black',
+  [theme.breakpoints.down('md')]: {
+    flexDirection: 'column',
+  },
+}));
 
 export default ContainerStyle;
