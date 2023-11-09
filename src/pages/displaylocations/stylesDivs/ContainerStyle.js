@@ -1,7 +1,9 @@
-import { styled } from '@mui/system';
-import Grid from '@mui/material/Grid';
+// ContainerStyle.jsx
+import { styled } from '@mui/system'
+import Grid from '@mui/material/Grid'
 
 const ContainerStyle = styled(Grid)(({ theme }) => ({
+  position: 'relative',
   width: '100%',
   padding: '10px',
   margin: '20px 0px',
@@ -14,6 +16,7 @@ const ContainerStyle = styled(Grid)(({ theme }) => ({
   [theme.breakpoints.down('md')]: {
     flexDirection: 'column',
   },
-}));
+}))
 
-export default ContainerStyle;
+export default ContainerStyle
+
