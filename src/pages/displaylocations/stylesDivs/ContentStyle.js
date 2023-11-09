@@ -7,7 +7,8 @@ const ContentStyle = styled('div')(() => ({
         justifyContent:'center',
         flexDirection:'column',
         top: '140px',
-        left: '400px'
+        left: '400px',
+        marginLeft:'10px'
 }))
 
 export default ContentStyle;
