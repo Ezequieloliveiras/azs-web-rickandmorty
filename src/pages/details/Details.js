@@ -1,4 +1,4 @@
-import { useQuery} from '@apollo/client'
+import { useQuery } from '@apollo/client'
 import { gql } from '@apollo/client'
 import { useState } from 'react'
 
@@ -38,7 +38,7 @@ const GET_ALL_EPISODE_IDS = gql`
 function Details() {
   const { loading, error, data } = useQuery(GET_ALL_EPISODE_IDS)
 
-  const initialFavoriteEpisodes = [] 
+  const initialFavoriteEpisodes = []
 
   const [favoriteEpisodes, setFavoriteEpisodes] = useState(initialFavoriteEpisodes)
 
@@ -71,6 +71,7 @@ function Details() {
               <h3>Lançamento: {air_date}</h3>
               <h3>Total de Personagens no Episódio: {totalCharacterCountForEpisode}</h3>
               <FavoriteButton
+                id={id}
                 onToggleFavorite={() => toggleFavorite(id)}
                 isFavorite={isFavorite}
               />
