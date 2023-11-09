@@ -9,10 +9,6 @@ import Div from '../displaylocations/stylesDivs/NameDivs'
 
 import {
   Grid,
-  Card,
-  CardMedia,
-  CardContent,
-  Typography
 } from '@mui/material'
 
 
@@ -41,9 +37,11 @@ function DisplayLocations() {
 
   return (
     <div style={{display:'flex', justifyContent:'center', flexDirection:'column'}}>
+      
       <TitleLocations />
+  
       {data.episodes.results.map(({ id, episode, name, air_date, characters }) => {
-        const totalCharacterCountForEpisode = characters ? characters.length : 0;
+        const totalCharacterCountForEpisode = characters ? characters.length : 0
 
         return (
           <Grid container alignItems="center" key={id}>
@@ -66,7 +64,7 @@ function DisplayLocations() {
               </ContainerStyle>
             </Grid>
           </Grid>
-        );
+        )
       })}
     </div>
 
