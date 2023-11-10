@@ -23,8 +23,8 @@ function SeenButton({ id, onToggleSeen }) {
       onClick={handleToggleSeen}
       style={{
         position: 'absolute',
-        top: '10px',
-        right: '50px',
+        top: '45px',
+        right: '10px',
         background: 'none',
         border: 'none',
       }}
