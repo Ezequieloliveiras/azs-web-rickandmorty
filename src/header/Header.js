@@ -1,36 +1,34 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
+import * as React from 'react'
+
+import {
+    AppBar,
+    Box,
+    Toolbar,
+    Typography,
+    IconButton,
+    Menu,
+    Container,
+} from '@mui/material'
+
+import MenuIcon from '@mui/icons-material/Menu'
+
+
 import SubMenu from './SubMenu'
-import AdbIcon from '@mui/icons-material/Adb';
-
-const pages = ['Products', 'Pricing', 'Blog'];
-
 
 function ResponsiveAppBar() {
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
-
+    const [anchorElNav, setAnchorElNav] = React.useState(null)
 
     const handleOpenNavMenu = (event) => {
-        setAnchorElNav(event.currentTarget);
-    };
+        setAnchorElNav(event.currentTarget)
+    }
 
 
     const handleCloseNavMenu = () => {
-        setAnchorElNav(null);
-    };
-
-
+        setAnchorElNav(null)
+    }
 
     return (
-        <AppBar position="static" sx={{backgroundColor:'#6b3fa0'}}>
+        <AppBar position="static" sx={{ backgroundColor: '#6b3fa0' }}>
             <Container maxWidth="xl" >
                 <Toolbar disableGutters >
                     <Typography
@@ -46,13 +44,13 @@ function ResponsiveAppBar() {
                             letterSpacing: '.1rem',
                             color: 'inherit',
                             textDecoration: 'none',
-                            marginRight:'50px'
+                            marginRight: '50px'
                         }}
                     >
                         RICK AND MORTY
                     </Typography>
                     <Typography
-                       
+
                         noWrap
                         component="a"
                         href="/"
@@ -60,7 +58,7 @@ function ResponsiveAppBar() {
                             mr: 2,
                             display: { xs: 'none', md: 'flex' },
                             fontFamily: 'monospace',
-                            
+
                             letterSpacing: '.3rem',
                             color: 'inherit',
                             textDecoration: 'none',
@@ -115,8 +113,8 @@ function ResponsiveAppBar() {
                             }}
                         >
                             <SubMenu>
-                                <a href="/" style={{textDecoration:'none', marginBottom:'10px'}}>LIST OF EPISODES</a>
-                                <a href="/details" style={{textDecoration:'none'}}>DETAILS EPISODES</a>
+                                <a href="/" style={{ textDecoration: 'none', marginBottom: '10px' }}>LIST OF EPISODES</a>
+                                <a href="/details" style={{ textDecoration: 'none' }}>DETAILS EPISODES</a>
                             </SubMenu>
                         </Menu>
                     </Box>
@@ -141,6 +139,6 @@ function ResponsiveAppBar() {
                 </Toolbar>
             </Container>
         </AppBar>
-    );
+    )
 }
-export default ResponsiveAppBar;
+export default ResponsiveAppBar
