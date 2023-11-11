@@ -151,8 +151,8 @@ function ResponsiveAppBar() {
               }}
             >
               <SubMenu>
-                <a href="/" style={{ textDecoration: 'none', marginBottom: '10px' }}>LIST OF EPISODES</a>
-                <a href="/details" style={{ textDecoration: 'none' }}>DETAILS EPISODES</a>
+                <a href="/" style={{ textDecoration: 'none', marginBottom: '10px', paddingLeft:'10px' }}>LIST OF EPISODES</a>
+                <a href="/details" style={{ textDecoration: 'none', paddingLeft:'10px' }}>DETAILS EPISODES</a>
                 <Box
                   component="form"
                   onSubmit={handleSearchSubmit}
