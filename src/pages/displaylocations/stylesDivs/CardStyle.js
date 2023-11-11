@@ -2,7 +2,7 @@ import { styled } from '@mui/system'
 
 const CardStyle = styled('div')(() => ({
     position:'relative',
-    width: '300px',
+    width: '400px',
     height: '300px',
     margin: '10px',
     padding:'10px',

@@ -2,8 +2,7 @@ import { styled } from '@mui/system'
 
 const Div = styled('div')(() => ({
     display: 'flex',
-    flexDirection:'column',
-    alignItems:'flex-start',
+    alignItems: 'center',
     width: 'auto',
     paddingBottom: '10px'
 }))

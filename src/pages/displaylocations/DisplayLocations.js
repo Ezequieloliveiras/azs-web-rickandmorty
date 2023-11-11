@@ -68,17 +68,17 @@ function DisplayLocations() {
                   isFavorite={isFavorite}
                 />
                
-                  <h3>Episódio: {episode}</h3>
+                  <h3>Episode: {episode}</h3>
               
                 <ContentStyle>
                   <Div>
-                    <h4>Nome do Episódio:</h4> {name}
-                
-                 
-                    <h4>Lançamento:</h4> {air_date}
-                
-                 
-                    <h4>Total de Personagens no Episódio:</h4> {totalCharacterCountForEpisode}
+                   <h4>Name:</h4>{name}
+                  </Div>
+                  <Div>
+                  <h4>Launch:</h4> {air_date}
+                  </Div>
+                  <Div>
+                  <h4>Characters:</h4> {totalCharacterCountForEpisode}
                   </Div>
                 </ContentStyle>
                 </CardStyle>
