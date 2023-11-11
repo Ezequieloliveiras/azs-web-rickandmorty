@@ -47,10 +47,10 @@ function Details() {
         return (
           <div key={id}>
             <Description>
-              <h3>Episódio: {episode}</h3>
-              <h3>Nome: {name}</h3>
-              <h3>Lançamento: {air_date}</h3>
-              <h3>Total de Personagens no Episódio: {totalCharacterCountForEpisode}</h3>
+              <h3>Espisode: {episode}</h3>
+              <h3>Name: {name}</h3>
+              <h3>Launch: {air_date}</h3>
+              <h3>Characters: {totalCharacterCountForEpisode}</h3>
             </Description>
 
             <Grid container spacing={3} justifyContent="center">
@@ -65,8 +65,8 @@ function Details() {
                     />
                     <CardContent>
                       <Typography variant="body2" color="textSecondary" component="div">
-                        <div>Personagem: {character.name}</div>
-                        <div>Espécie: {character.species}</div>
+                        <div>Character: {character.name}</div>
+                        <div>Species: {character.species}</div>
                         <div>Status: {character.status}</div>
                       </Typography>
                     </CardContent>

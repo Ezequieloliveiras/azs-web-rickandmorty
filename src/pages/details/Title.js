@@ -14,7 +14,7 @@ function TitleDetails() {
                 component="h4"
                 align="center"
                 sx={{ marginBottom: '20px' }}>
-                Detalhes dos Episódios
+                Episode Details
             </Typography>
         </div>
     )

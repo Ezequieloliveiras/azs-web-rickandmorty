@@ -80,12 +80,12 @@ function Header() {
                     <Typography
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
-                        <a style={{ color: 'white', textDecoration: 'none' }} href="/">Lista de Episódios</a>
+                        <a style={{ color: 'white', textDecoration: 'none' }} href="/">Episode List</a>
                     </Typography>
                     <Typography
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
-                        <a style={{ color: 'white', textDecoration: 'none' }} href="/details">Detalhes dos Episódios</a>
+                        <a style={{ color: 'white', textDecoration: 'none' }} href="/details">Episode Details</a>
                     </Typography>
                     <Search>
                         <SearchIconWrapper>
