@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import Home from'./pages/Home'
+import ListOfEpisodes from'./pages/listofepisodes/ListOfEpisodes'
 import Details from './pages/details/Details'
 
 
@@ -8,7 +8,7 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/details" element={<Details />} />
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<ListOfEpisodes />} />
       </Routes>
     </Router>
   )

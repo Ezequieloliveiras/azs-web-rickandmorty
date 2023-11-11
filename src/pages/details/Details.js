@@ -9,9 +9,9 @@ import {
   Typography
 } from '@mui/material'
 
-import TitleDetails from './TitleDetails'
-import DescriptionStyle from './StyleDivs/DescriptionStyle'
-import Father from './StyleDivs/Father'
+import Title from './Title'
+import Description from './stylesdivs/Description'
+import Father from './stylesdivs/Father'
 
 const GET_ALL_EPISODE_IDS = gql`
   query GetAllCharacters {
@@ -40,18 +40,18 @@ function Details() {
 
   return (
     <Father>
-      <TitleDetails />
+      <Title />
       {data.episodes.results.map(({ id, episode, name, air_date, characters }) => {
         const totalCharacterCountForEpisode = characters ? characters.length : 0
 
         return (
           <div key={id}>
-            <DescriptionStyle>
+            <Description>
               <h3>Episódio: {episode}</h3>
               <h3>Nome: {name}</h3>
               <h3>Lançamento: {air_date}</h3>
               <h3>Total de Personagens no Episódio: {totalCharacterCountForEpisode}</h3>
-            </DescriptionStyle>
+            </Description>
 
             <Grid container spacing={3} justifyContent="center">
               {characters.map((character, index) => (
