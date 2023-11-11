@@ -1,14 +1,14 @@
 import { styled } from '@mui/system'
 
 const ContentStyle = styled('div')(() => ({
+        position:'relative',
         display:'flex',
-        width: '400px',
+        width: 'auto',
         height: '150px',
         justifyContent:'center',
         flexDirection:'column',
-        top: '140px',
-        left: '400px',
-        marginLeft:'10px'
+        top: '10px',
+        fontSize:'15px'
 }))
 
 export default ContentStyle;

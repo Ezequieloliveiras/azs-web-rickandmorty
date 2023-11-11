@@ -5,7 +5,6 @@ import { useState } from 'react'
 import { Grid } from '@mui/material'
 
 import TitleLocations from './TitleLocations'
-import ContainerStyle from '../displaylocations/stylesDivs/ContainerStyle'
 import CardStyle from './stylesDivs/CardStyle'
 import ContentStyle from '../displaylocations/stylesDivs/ContentStyle'
 import Div from '../displaylocations/stylesDivs/NameDivs'
@@ -55,9 +54,9 @@ function DisplayLocations() {
         const isFavorite = favoriteEpisodes.includes(id)
 
         return (
-          <Grid container alignItems="center" key={id}>
+          <Grid container alignItems="center" justifyContent="center" key={id}>
             <Grid item>
-              <ContainerStyle>
+              <CardStyle>
                 <SeenButton
                   id={id}
                   onToggleSeen={() => { }}
@@ -68,21 +67,21 @@ function DisplayLocations() {
                   onToggleFavorite={() => toggleFavorite(id)}
                   isFavorite={isFavorite}
                 />
-                <CardStyle>
+               
                   <h3>Episódio: {episode}</h3>
-                </CardStyle>
+              
                 <ContentStyle>
                   <Div>
                     <h4>Nome do Episódio:</h4> {name}
-                  </Div>
-                  <Div>
+                
+                 
                     <h4>Lançamento:</h4> {air_date}
-                  </Div>
-                  <Div>
+                
+                 
                     <h4>Total de Personagens no Episódio:</h4> {totalCharacterCountForEpisode}
                   </Div>
                 </ContentStyle>
-              </ContainerStyle>
+                </CardStyle>
             </Grid>
           </Grid>
         )
