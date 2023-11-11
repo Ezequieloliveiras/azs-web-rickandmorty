@@ -49,13 +49,13 @@ function DisplayLocations() {
   return (
     <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
       <TitleLocations />
-      {data.episodes.results.map(({ id, episode, name, air_date, characters }) => {
-        const totalCharacterCountForEpisode = characters ? characters.length : 0
-        const isFavorite = favoriteEpisodes.includes(id)
+      <Grid container spacing={2} justifyContent="center">
+        {data.episodes.results.map(({ id, episode, name, air_date, characters }) => {
+          const totalCharacterCountForEpisode = characters ? characters.length : 0
+          const isFavorite = favoriteEpisodes.includes(id)
 
-        return (
-          <Grid container alignItems="center" justifyContent="center" key={id}>
-            <Grid item>
+          return (
+            <Grid item key={id}>
               <CardStyle>
                 <SeenButton
                   id={id}
@@ -67,25 +67,23 @@ function DisplayLocations() {
                   onToggleFavorite={() => toggleFavorite(id)}
                   isFavorite={isFavorite}
                 />
-               
-                  <h3>Episode: {episode}</h3>
-              
+                <h3>Episode: {episode}</h3>
                 <ContentStyle>
                   <Div>
-                   <h4>Name:</h4>{name}
+                    <h4>Name:</h4>{name}
                   </Div>
                   <Div>
-                  <h4>Launch:</h4> {air_date}
+                    <h4>Launch:</h4> {air_date}
                   </Div>
                   <Div>
-                  <h4>Characters:</h4> {totalCharacterCountForEpisode}
+                    <h4>Characters:</h4> {totalCharacterCountForEpisode}
                   </Div>
                 </ContentStyle>
-                </CardStyle>
+              </CardStyle>
             </Grid>
-          </Grid>
-        )
-      })}
+          )
+        })}
+      </Grid>
     </div>
   )
 }
