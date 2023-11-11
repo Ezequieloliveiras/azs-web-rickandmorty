@@ -1,11 +1,11 @@
-import DisplayLocations from "./displaylocations/DisplayLocations"
+import ListOfEpisodes from "./listofepisodes/ListOfEpisodes"
 
 function Home() {
   
     return (
         <div style={{display:'flex', justifyContent:'space-around', alignItems:'center'}}>
 
-       <DisplayLocations/>
+       <ListOfEpisodes/>
        
         </div>
     )

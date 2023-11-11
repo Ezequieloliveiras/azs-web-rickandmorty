@@ -4,12 +4,12 @@ import { useState } from 'react'
 
 import { Grid } from '@mui/material'
 
-import TitleLocations from './TitleLocations'
-import CardStyle from './stylesDivs/CardStyle'
-import ContentStyle from '../displaylocations/stylesDivs/ContentStyle'
-import Div from '../displaylocations/stylesDivs/NameDivs'
-import FavoriteButton from './FavoriteButton'
-import SeenButton from './SeenButton'
+import Title from './Title'
+import Card from './stylesdivs/Card'
+import Content from './stylesdivs/Content'
+import Div from '../listofepisodes/stylesdivs/Div'
+import FavoriteButton from './icons/FavoriteIcon'
+import SeenButton from './icons/SeenIcon'
 
 const GET_ALL_EPISODE_IDS = gql`
   query GetAllEpisodeIds {
@@ -27,7 +27,7 @@ const GET_ALL_EPISODE_IDS = gql`
   }
 `
 
-function DisplayLocations() {
+function ListOfEpisodes() {
   const { loading, error, data } = useQuery(GET_ALL_EPISODE_IDS)
   const initialFavoriteEpisodes = []
   const [favoriteEpisodes, setFavoriteEpisodes] = useState(initialFavoriteEpisodes)
@@ -48,7 +48,7 @@ function DisplayLocations() {
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
-      <TitleLocations />
+      <Title />
       <Grid container spacing={2} justifyContent="center">
         {data.episodes.results.map(({ id, episode, name, air_date, characters }) => {
           const totalCharacterCountForEpisode = characters ? characters.length : 0
@@ -56,7 +56,7 @@ function DisplayLocations() {
 
           return (
             <Grid item key={id}>
-              <CardStyle>
+              <Card>
                 <SeenButton
                   id={id}
                   onToggleSeen={() => { }}
@@ -68,7 +68,7 @@ function DisplayLocations() {
                   isFavorite={isFavorite}
                 />
                 <h3>Episode: {episode}</h3>
-                <ContentStyle>
+                <Content>
                   <Div>
                     <h4>Name:</h4>{name}
                   </Div>
@@ -78,8 +78,8 @@ function DisplayLocations() {
                   <Div>
                     <h4>Characters:</h4> {totalCharacterCountForEpisode}
                   </Div>
-                </ContentStyle>
-              </CardStyle>
+                </Content>
+              </Card>
             </Grid>
           )
         })}
@@ -88,4 +88,4 @@ function DisplayLocations() {
   )
 }
 
-export default DisplayLocations
+export default ListOfEpisodes
