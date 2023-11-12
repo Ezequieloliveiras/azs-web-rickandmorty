@@ -7,26 +7,14 @@ import {
   IconButton,
   Menu,
   Container,
-  InputBase,
 } from '@mui/material'
 
-import SearchIcon from '@mui/icons-material/Search'
 import MenuIcon from '@mui/icons-material/Menu'
 import SubMenu from './SubMenu'
 
 function ResponsiveAppBar() {
-  const [searchValue, setSearchValue] = React.useState('')
+
   const [anchorElNav, setAnchorElNav] = React.useState(null)
-
-  const handleSearchChange = (event) => {
-    setSearchValue(event.target.value)
-  }
-
-  const handleSearchSubmit = (event) => {
-    event.preventDefault()
-    console.log('Search submitted:', searchValue)
-    setSearchValue('')
-  }
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget)
@@ -90,37 +78,6 @@ function ResponsiveAppBar() {
           >
             DETAILS
           </Typography>
-
-          <Box
-            component="form"
-            onSubmit={handleSearchSubmit}
-            sx={{
-              display: { xs: 'none', md: 'flex' },
-              alignItems: 'center',
-              marginLeft: 'auto',
-            }}
-          >
-            <IconButton
-              type="submit"
-              aria-label="search"
-              color="inherit"
-              sx={{ p: '10px' }}
-            >
-              <SearchIcon />
-            </IconButton>
-            <InputBase
-              placeholder="Search..."
-              value={searchValue}
-              onChange={handleSearchChange}
-              sx={{
-                color: 'inherit',
-                '& .MuiInputBase-input': {
-                  fontFamily: 'monospace',
-                },
-              }}
-            />
-          </Box>
-
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -153,35 +110,6 @@ function ResponsiveAppBar() {
               <SubMenu>
                 <a href="/" style={{ textDecoration: 'none', marginBottom: '10px', paddingLeft:'10px' }}>LIST OF EPISODES</a>
                 <a href="/details" style={{ textDecoration: 'none', paddingLeft:'10px' }}>DETAILS EPISODES</a>
-                <Box
-                  component="form"
-                  onSubmit={handleSearchSubmit}
-                  sx={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    marginTop: '10px',
-                  }}
-                >
-                  <IconButton
-                    type="submit"
-                    aria-label="search"
-                    color="inherit"
-                    sx={{ p: '10px' }}
-                  >
-                    <SearchIcon />
-                  </IconButton>
-                  <InputBase
-                    placeholder="Search..."
-                    value={searchValue}
-                    onChange={handleSearchChange}
-                    sx={{
-                      color: 'inherit',
-                      '& .MuiInputBase-input': {
-                        fontFamily: 'monospace',
-                      },
-                    }}
-                  />
-                </Box>
               </SubMenu>
             </Menu>
           </Box>
