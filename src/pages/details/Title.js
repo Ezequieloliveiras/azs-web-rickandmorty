@@ -13,7 +13,7 @@ function TitleDetails() {
             <Typography variant="h6"
                 component="h4"
                 align="center"
-                sx={{ marginBottom: '20px' }}>
+                sx={{ marginBottom: '20px', margin: '100px 0px 100px', fontSize:'30px' }}>
                 Episode Details
             </Typography>
         </div>

@@ -108,8 +108,8 @@ function ResponsiveAppBar() {
               }}
             >
               <SubMenu>
-                <a href="/" style={{ textDecoration: 'none', marginBottom: '10px', paddingLeft:'10px' }}>LIST OF EPISODES</a>
-                <a href="/details" style={{ textDecoration: 'none', paddingLeft:'10px' }}>DETAILS EPISODES</a>
+                <a href="/" style={{ textDecoration: 'none', marginBottom: '10px', paddingLeft:'10px', color:'#6b3fa0' }}>LIST OF EPISODES</a>
+                <a href="/details" style={{ textDecoration: 'none', paddingLeft:'10px', color:'#6b3fa0' }}>DETAILS EPISODES</a>
               </SubMenu>
             </Menu>
           </Box>

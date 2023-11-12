@@ -1,4 +1,3 @@
-// FavoriteButton.jsx
 import React, { useState } from 'react'
 import StarOutlineIcon from '@mui/icons-material/StarOutline'
 import StarIcon from '@mui/icons-material/Star'
@@ -8,7 +7,6 @@ function FavoriteButton({ id, onToggleFavorite }) {
 
   const localStorageKey = `isFavorite_${id}`
   const initialIsFavorite = JSON.parse(localStorage.getItem(localStorageKey)) || false
-
   const [isFavorite, setIsFavorite] = useState(initialIsFavorite)
 
   const handleToggleFavorite = () => {

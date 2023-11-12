@@ -13,7 +13,7 @@ const CardStyle = styled('div')(() => ({
   alignItems: 'center',
   backgroundColor: 'white',
   border: 'none',
-  boxShadow: '0px 0px 5px 1px',
+  boxShadow: '0px 0px 5px 1px ',
 
   '@media (max-width: 360px)': {
     width: '300px',
