@@ -55,12 +55,16 @@ function ResponsiveAppBar() {
               mr: 2,
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
-              letterSpacing: '.3rem',
+              letterSpacing: '0.1rem',
               color: 'inherit',
               textDecoration: 'none',
+              '&:hover': {
+                color: 'white',
+                textDecoration: 'underline',
+              },
             }}
           >
-            EPISODES
+            LIST OF EPISODES
           </Typography>
 
           <Typography
@@ -71,12 +75,17 @@ function ResponsiveAppBar() {
               mr: 2,
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
-              letterSpacing: '.3rem',
+              letterSpacing: '.1rem',
               color: 'inherit',
               textDecoration: 'none',
+              marginLeft:'20px',
+              '&:hover': {
+                color: 'white',
+                textDecoration: 'underline', 
+              },
             }}
           >
-            DETAILS
+            DETAILS OF EPISODES
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -108,8 +117,17 @@ function ResponsiveAppBar() {
               }}
             >
               <SubMenu>
-                <a href="/" style={{ textDecoration: 'none', marginBottom: '10px', paddingLeft:'10px', color:'#6b3fa0' }}>LIST OF EPISODES</a>
-                <a href="/details" style={{ textDecoration: 'none', paddingLeft:'10px', color:'#6b3fa0' }}>DETAILS EPISODES</a>
+                <a href="/" style={{
+                  textDecoration: 'none',
+                  marginBottom: '10px',
+                  paddingLeft: '10px',
+                  color: '#6b3fa0'
+                }}>LIST OF EPISODES</a>
+                <a href="/details" style={{
+                  textDecoration: 'none',
+                  paddingLeft: '10px',
+                  color: '#6b3fa0'
+                }}>DETAILS EPISODES</a>
               </SubMenu>
             </Menu>
           </Box>
