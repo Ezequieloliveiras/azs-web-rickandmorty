@@ -4,7 +4,7 @@ import VisibilityIcon from '@mui/icons-material/Visibility'
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff'
 
 function SeenButton({ id, onToggleSeen }) {
-  const eyeSize = 30
+  const eyeSize = 22
 
   const localStorageKey = `isSeen_${id}`
   const initialIsSeen = JSON.parse(localStorage.getItem(localStorageKey)) || false

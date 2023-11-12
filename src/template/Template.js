@@ -2,7 +2,7 @@ import Container from '@mui/material/Container'
 import { styled } from '@mui/system'
 import Header from '../pages/partials/header/Header'
 import ControlledCarousel from '../pages/partials/carousel/Carousel'
-
+import Footer from '../pages/partials/footer/Footer'
 
 
 
@@ -23,6 +23,7 @@ const Template = ({ children }) => {
             <ControlledCarousel />
             <StyledContainer style={{ padding: '0px 0px' }}>
                 {children}
+            <Footer />
             </StyledContainer>
         </>
     )

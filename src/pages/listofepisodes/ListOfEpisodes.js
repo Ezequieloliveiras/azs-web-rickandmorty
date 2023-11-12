@@ -73,16 +73,16 @@ function ListOfEpisodes() {
                   onToggleFavorite={() => toggleFavorite(id)}
                   isFavorite={isFavorite}
                 />
-                <h3>Episode: {episode}</h3>
+                <h4>Episode: {episode}</h4>
                 <Content>
                   <Div>
-                    <h4>Name:</h4>{name}
+                    <h5 style={{paddingTop:'5px', marginRight:'5px'}}>Name:</h5>{name}
                   </Div>
                   <Div>
-                    <h4>Launch:</h4> {air_date}
+                    <h5 style={{paddingTop:'5px', marginRight:'5px'}}>Launch:</h5> {air_date}
                   </Div>
                   <Div>
-                    <h4>Characters:</h4> {totalCharacterCountForEpisode}
+                    <h5 style={{paddingTop:'5px', marginRight:'5px'}}>Characters:</h5> {totalCharacterCountForEpisode}
                   </Div>
                 </Content>
               </Card>
