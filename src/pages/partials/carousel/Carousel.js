@@ -18,9 +18,6 @@ function ControlledCarousel() {
           src="https://wallpapers.com/images/hd/rick-and-morty-tv-shows-title-cover-o279wd0wliqhprc6.webp"
           alt="First slide"
           style={{
-            boxShadow: '0px 10px 20px rgba(0, 0, 0, 0.5)',
-            borderBottomLeftRadius: '10px',
-            borderBottomRightRadius: '10px',
           }}
         />
       </Carousel.Item>
@@ -31,8 +28,6 @@ function ControlledCarousel() {
           alt="First slide"
           style={{
             boxShadow: '0px 10px 20px rgba(0, 0, 0, 0.5)',
-            borderBottomLeftRadius: '10px',
-            borderBottomRightRadius: '10px',
           }}
         />
       </Carousel.Item>
@@ -43,8 +38,6 @@ function ControlledCarousel() {
           alt="First slide"
           style={{
             boxShadow: '0px 10px 20px rgba(0, 0, 0, 0.5)',
-            borderBottomLeftRadius: '10px',
-            borderBottomRightRadius: '10px',
           }}
         />
       </Carousel.Item>
