@@ -51,7 +51,7 @@ function Details() {
     }
   }, [])
 
-  if (loading) return <p>Loading...</p>
+  if (loading) return null
   if (error) return <p>Error: {error.message}</p>
 
   const scrollToTop = () => {
@@ -107,7 +107,7 @@ function Details() {
           onClick={scrollToTop}
           variant="contained"
           color="primary"
-          sx={{ position: 'fixed', bottom: 16, right: 16, backgroundColor:'#6b3fa0' }}
+          sx={{ position: 'fixed', bottom: 16, right: 16, backgroundColor: '#6b3fa0' }}
         >
           <KeyboardArrowUpIcon />
         </Button>

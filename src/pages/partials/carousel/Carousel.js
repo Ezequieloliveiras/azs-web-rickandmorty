@@ -22,7 +22,7 @@ function ControlledCarousel() {
         />
       </Carousel.Item>
       <Carousel.Item>
-      <img
+        <img
           className="d-block w-100"
           src="https://wallpapers.com/images/hd/rick-and-morty-playing-with-portals-zzqyo8gmvrrm3mh8.webp"
           alt="First slide"
@@ -32,7 +32,7 @@ function ControlledCarousel() {
         />
       </Carousel.Item>
       <Carousel.Item>
-      <img
+        <img
           className="d-block w-100"
           src="https://wallpapers.com/images/hd/rick-and-morty-looking-at-the-night-sky-tr8wxryct280wstz.webp"
           alt="First slide"

@@ -11,8 +11,7 @@ const CardStyle = styled('div')(() => ({
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  overflow: 'hidden', 
-  position: 'relative', 
+  overflow: 'hidden',
   border: 'none',
   boxShadow: '0px 0px 10px 2px rgba(128, 0, 128, 0.5)',
   '&::before': {
@@ -28,7 +27,7 @@ const CardStyle = styled('div')(() => ({
     backgroundRepeat: 'no-repeat',
     opacity: 0.1,
   },
-  
+
   '@media (max-width: 360px)': {
     width: '300px',
   },

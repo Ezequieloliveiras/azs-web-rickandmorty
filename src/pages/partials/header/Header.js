@@ -78,10 +78,10 @@ function ResponsiveAppBar() {
               letterSpacing: '.1rem',
               color: 'inherit',
               textDecoration: 'none',
-              marginLeft:'20px',
+              marginLeft: '20px',
               '&:hover': {
                 color: 'white',
-                textDecoration: 'underline', 
+                textDecoration: 'underline',
               },
             }}
           >
