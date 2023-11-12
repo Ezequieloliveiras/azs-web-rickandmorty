@@ -1,4 +1,4 @@
-import { styled } from '@mui/system';
+import { styled } from '@mui/system'
 
 const CardStyle = styled('div')(() => ({
   position: 'relative',
@@ -32,6 +32,6 @@ const CardStyle = styled('div')(() => ({
   '@media (max-width: 360px)': {
     width: '300px',
   },
-}));
+}))
 
-export default CardStyle;
+export default CardStyle

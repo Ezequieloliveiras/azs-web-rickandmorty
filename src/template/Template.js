@@ -21,7 +21,7 @@ const Template = ({ children }) => {
         <>
             <Header />
             <ControlledCarousel />
-            <StyledContainer style={{ padding: '0px 0px' }}>
+            <StyledContainer style={{ padding: '0px 0px', color:'#6b3fa0' }}>
                 {children}
             <Footer />
             </StyledContainer>
